@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:55:41 by mpedroso          #+#    #+#             */
-/*   Updated: 2022/11/21 18:47:11 by mpedroso         ###   ########.fr       */
+/*   Updated: 2022/11/21 19:05:16 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ char	*get_next_line(int fd);
 char	*ft_strjoin(char *s1, char *buf);
 size_t	ft_strlen(char *s);
 int		clear_ln(char *buf);
+char	*free_gnl(char *gnl);
 
 #endif

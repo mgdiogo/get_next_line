@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:55:01 by mpedroso          #+#    #+#             */
-/*   Updated: 2022/11/21 18:56:38 by mpedroso         ###   ########.fr       */
+/*   Updated: 2022/11/21 19:02:49 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,7 @@ char	*get_next_line(int fd)
 		return (gnl);
 	i = read(fd, line, BUFFER_SIZE);
 	if (i < 0 || (i == 0 && (!gnl || *gnl == '\0')))
-	{
-		free(gnl);
-		return (NULL);
-	}
+		return (free_gnl(gnl));
 	while (i > 0)
 	{
 		gnl = ft_strjoin(gnl, line);
@@ -37,9 +34,6 @@ char	*get_next_line(int fd)
 		i = read(fd, line, BUFFER_SIZE);
 	}
 	if (i == -1)
-	{
-		free(gnl);
-		return (NULL);
-	}
+		return (free_gnl(gnl));
 	return (gnl);
 }

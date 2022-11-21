@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 13:42:24 by mpedroso          #+#    #+#             */
-/*   Updated: 2022/11/21 18:40:39 by mpedroso         ###   ########.fr       */
+/*   Updated: 2022/11/21 19:05:02 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,10 @@ int	clear_ln(char *buf)
 		buf[i++] = 0;
 	}
 	return (flag);
+}
+
+char	*free_gnl(char *gnl)
+{
+	free(gnl);
+	return (NULL);
 }
